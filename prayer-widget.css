@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f1ed;
+    font-family: "Segoe UI", sans-serif;
+    padding: 20px;
+}
+
+.prayer-widget {
+    max-width: 1400px;
+    margin: auto;
+    background: #faf9f7;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.date-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.gregorian {
+    color: #c89b57;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.hijri {
+    color: #c89b57;
+    font-size: 1.2rem;
+    margin-top: 8px;
+}
+
+.countdown-box {
+    background: #f2efec;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.countdown-title {
+    color: #c89b57;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.countdown-time {
+    font-size: 6rem;
+    color: #c89b57;
+    letter-spacing: 10px;
+    font-weight: 300;
+}
+
+.countdown-labels {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 10px;
+    color: #c89b57;
+}
+
+.prayers-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.prayer-card {
+    background: #f5f3f1;
+    border-radius: 16px;
+    text-align: center;
+    padding: 30px 10px;
+    transition: .3s;
+}
+
+.prayer-card.active {
+    background: #d7b47a;
+    color: white;
+}
+
+.prayer-name {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.prayer-time {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.jummah-box {
+    background: #f5f3f1;
+    border-radius: 16px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    color: #c89b57;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+@media(max-width:1000px){
+
+    .prayers-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .countdown-time{
+        font-size:4rem;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .prayers-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .countdown-time{
+        font-size:3rem;
+    }
+
+}
