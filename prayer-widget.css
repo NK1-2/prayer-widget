@@ -5,127 +5,151 @@
 }
 
 body {
-    background: #f4f1ed;
+    background: transparent;
     font-family: "Segoe UI", sans-serif;
-    padding: 20px;
+    padding: 10px;
 }
 
+/* MAIN WIDGET */
 .prayer-widget {
-    max-width: 1400px;
-    margin: auto;
-    background: #faf9f7;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    width: 100%;
+    max-width: 950px;      /* reduced from 1400px */
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 
+/* DATE */
 .date-section {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .gregorian {
-    color: #c89b57;
-    font-size: 2rem;
+    color: #D9B783;
+    font-size: 1.9rem;
     font-weight: 600;
 }
 
-.hijri {
-    color: #c89b57;
-    font-size: 1.2rem;
-    margin-top: 8px;
-}
-
+/* COUNTDOWN */
 .countdown-box {
-    background: #f2efec;
-    border-radius: 20px;
-    padding: 35px;
+    background: #F4F2EE;
+    border-radius: 16px;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .countdown-title {
-    color: #c89b57;
-    font-size: 1.8rem;
+    color: #D9B783;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .countdown-time {
-    font-size: 6rem;
-    color: #c89b57;
-    letter-spacing: 10px;
+    font-size: 3.5rem;
+    color: #D9B783;
+    letter-spacing: 4px;
     font-weight: 300;
 }
 
 .countdown-labels {
     display: flex;
     justify-content: center;
-    gap: 80px;
-    margin-top: 10px;
-    color: #c89b57;
+    gap: 40px;
+    margin-top: 8px;
+    color: #D9B783;
+    font-size: 0.8rem;
 }
 
+/* PRAYERS GRID */
 .prayers-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
+    gap: 10px;
 }
 
+/* PRAYER CARDS */
 .prayer-card {
-    background: #f5f3f1;
-    border-radius: 16px;
+    background: #F4F2EE;
+    border-radius: 12px;
     text-align: center;
-    padding: 30px 10px;
+    padding: 18px 8px;
     transition: .3s;
 }
 
 .prayer-card.active {
-    background: #d7b47a;
-    color: white;
+    background: #D9B783;
+    color: #FFFFFF;
+    border: 2px solid #D9B783;
+}
+
+.prayer-card.active .prayer-name,
+.prayer-card.active .prayer-time {
+    color: #FFFFFF;
 }
 
 .prayer-name {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #D9B783;
 }
 
 .prayer-time {
-    font-size: 3rem;
+    font-size: 1.8rem;
     font-weight: 300;
+    color: #D9B783;
 }
 
+/* JUMU'AH */
 .jummah-box {
-    background: #f5f3f1;
-    border-radius: 16px;
-    margin-top: 20px;
+    background: #F4F2EE;
+    border-radius: 12px;
+    margin-top: 15px;
     text-align: center;
-    padding: 20px;
-    color: #c89b57;
-    font-size: 1.8rem;
+    padding: 14px;
+    color: #D9B783;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
-@media(max-width:1000px){
+/* TABLET */
+@media (max-width: 900px) {
 
-    .prayers-grid{
-        grid-template-columns:repeat(3,1fr);
+    .prayers-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .countdown-time{
-        font-size:4rem;
+    .countdown-time {
+        font-size: 2.8rem;
     }
-
 }
 
-@media(max-width:600px){
+/* MOBILE */
+@media (max-width: 600px) {
 
-    .prayers-grid{
-        grid-template-columns:repeat(2,1fr);
+    .prayers-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .countdown-time{
-        font-size:3rem;
+    .countdown-time {
+        font-size: 2rem;
+        letter-spacing: 2px;
     }
 
+    .gregorian {
+        font-size: 1.1rem;
+    }
+
+    .prayer-name {
+        font-size: 0.9rem;
+    }
+
+    .prayer-time {
+        font-size: 1.4rem;
+    }
 }
